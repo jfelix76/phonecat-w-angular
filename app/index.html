@@ -12,9 +12,16 @@
 <!-- added -->
     <script>
       // new bootstrap
+      // angular.element(document.body).ready(function() {
+      //   angular.bootstrap(document.body, ['phonecatApp']);
+      // });
+
+      // new new bootstrap
+      var upgradeAdapter = new ng.upgrade.UpgradeAdapter();
       angular.element(document.body).ready(function() {
-        angular.bootstrap(document.body, ['phonecatApp']);
+        upgradeAdapter.bootstrap(document.body, ['app']);
       });
+
     </script>
 
     <script src="node_modules/rxjs/bundles/Rx.umd.js"></script>
